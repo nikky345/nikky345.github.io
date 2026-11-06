@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nikhil Rai — Electrical Engineering student interested in power systems, electrical machines and industrial manufacturing." />
+  <title>Nikhil Rai | Electrical Engineering Portfolio</title>
+  <style>
+    :root {
+      --navy: #10243a;
+      --navy-2: #173c5d;
+      --blue: #247db5;
+      --sky: #eaf4fb;
+      --ink: #172536;
+      --muted: #637487;
+      --line: #dce6ef;
+      --paper: #ffffff;
+      --bg: #f5f8fb;
+      --gold: #e5b95c;
+      --shadow: 0 16px 40px rgba(16, 36, 58, .08);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.65; }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1080px, 91%); margin: 0 auto; }
+    header { position: sticky; top: 0; z-index: 10; background: rgba(16,36,58,.97); backdrop-filter: blur(10px); color: white; }
+    nav { min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 22px; }
+    .brand { font-weight: 800; letter-spacing: .3px; white-space: nowrap; }
+    .brand span { color: var(--gold); }
+    .navlinks { display: flex; gap: 24px; flex-wrap: wrap; font-size: 13px; color: #d9e7f3; }
+    .navlinks a:hover { color: white; }
+    .hero { color: white; background: radial-gradient(circle at 85% 20%, rgba(65,145,197,.28), transparent 30%), linear-gradient(125deg, var(--navy), var(--navy-2)); padding: 88px 0 82px; }
+    .eyebrow { color: #9fd5ff; font-size: 12px; letter-spacing: 2.2px; text-transform: uppercase; font-weight: 800; }
+    h1 { margin: 13px 0 12px; max-width: 800px; font-size: clamp(42px, 6.2vw, 70px); line-height: 1.06; letter-spacing: -2px; }
+    .hero h1 span { color: #8fcdf5; }
+    .hero-copy { max-width: 700px; color: #d9e7f3; font-size: 18px; margin: 18px 0 0; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 19px; border-radius: 7px; font-weight: 700; font-size: 14px; transition: transform .18s ease, background .18s ease; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { color: var(--navy); background: white; }
+    .btn-outline { color: white; border: 1px solid rgba(255,255,255,.45); }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 22px; margin-top: 35px; color: #c5d8e8; font-size: 13px; }
+    .hero-meta span::before { content: "•"; color: var(--gold); margin-right: 8px; }
+    section { padding: 68px 0; }
+    .section-head { margin-bottom: 28px; }
+    .section-kicker { color: var(--blue); text-transform: uppercase; font-size: 11px; letter-spacing: 2px; font-weight: 800; }
+    h2 { color: var(--navy); font-size: clamp(27px, 3.5vw, 38px); line-height: 1.2; margin: 7px 0 0; letter-spacing: -.7px; }
+    .lead { color: var(--muted); max-width: 760px; margin: 13px 0 0; }
+    .about-grid { display: grid; grid-template-columns: 1.35fr .85fr; gap: 22px; align-items: stretch; }
+    .panel, .card { background: var(--paper); border: 1px solid var(--line); border-radius: 13px; box-shadow: var(--shadow); }
+    .panel { padding: 27px; }
+    .panel p { margin: 0 0 13px; color: var(--muted); }
+    .facts { display: grid; gap: 13px; }
+    .fact { padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+    .fact:last-child { border: 0; padding-bottom: 0; }
+    .fact small { display: block; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 1.3px; font-weight: 800; }
+    .fact strong { color: var(--navy); font-size: 15px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; }
+    .card { padding: 23px; }
+    .card-icon { width: 39px; height: 39px; border-radius: 10px; display: grid; place-items: center; background: var(--sky); color: var(--blue); font-size: 19px; margin-bottom: 16px; }
+    .card h3 { color: var(--navy); margin: 0 0 7px; font-size: 17px; }
+    .card p { margin: 0; color: var(--muted); font-size: 14px; }
+    .experience { border-left: 3px solid var(--blue); padding: 2px 0 2px 22px; margin: 6px 0 0 5px; }
+    .experience h3 { color: var(--navy); margin: 0; font-size: 20px; }
+    .experience .meta { color: var(--blue); font-size: 13px; font-weight: 800; margin: 4px 0 12px; }
+    .experience p, .experience li { color: var(--muted); }
+    .experience ul { padding-left: 19px; margin: 8px 0 0; }
+    .achievement-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .achievement { display: flex; gap: 15px; padding: 20px; background: white; border: 1px solid var(--line); border-radius: 12px; }
+    .achievement .medal { flex: 0 0 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; background: #fff5dd; color: #9a6d16; font-size: 20px; }
+    .achievement h3 { font-size: 15px; margin: 0 0 4px; color: var(--navy); }
+    .achievement p { margin: 0; font-size: 13px; color: var(--muted); }
+    .skills { display: flex; flex-wrap: wrap; gap: 10px; }
+    .tag { background: white; border: 1px solid var(--line); border-radius: 999px; padding: 8px 13px; color: #29445e; font-size: 13px; font-weight: 650; }
+    .contact { background: var(--navy); color: white; padding: 58px 0; }
+    .contact h2 { color: white; }
+    .contact p { color: #c7d8e7; max-width: 650px; }
+    .contact .btn-primary { background: var(--gold); color: var(--navy); }
+    footer { background: #0b1a2a; color: #9fb2c4; padding: 18px 0; font-size: 12px; }
+    footer .container { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    @media (max-width: 760px) {
+      .navlinks { gap: 12px; font-size: 12px; }
+      .about-grid, .grid-3, .achievement-grid { grid-template-columns: 1fr; }
+      .hero { padding: 67px 0 62px; }
+      section { padding: 54px 0; }
+    }
+    @media (max-width: 470px) {
+      nav { align-items: flex-start; padding: 13px 0; flex-direction: column; }
+      .navlinks { gap: 15px; }
+      .hero-copy { font-size: 16px; }
+      h1 { letter-spacing: -1.2px; }
+    }
+    @media print {
+      header { position: static; }
+      .hero { padding: 40px 0; }
+      section { padding: 30px 0; }
+      .btn { border: 1px solid #aaa; }
+      body { background: white; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav aria-label="Main navigation">
+        <a class="brand" href="#home">NIKHIL <span>RAI</span></a>
+        <div class="navlinks">
+          <a href="#about">About</a><a href="#education">Education</a><a href="#experience">Internship</a><a href="#achievements">Achievements</a><a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="eyebrow">Electrical Engineering · Student Portfolio</div>
+        <h1>Nikhil <span>Rai</span></h1>
+        <p class="hero-copy">Electrical Engineering student at Government Engineering College, Daman, with an interest in power systems, electrical machines and industrial manufacturing. Eager to apply technical knowledge in real-world engineering environments.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="mailto:ray180528@gmail.com?subject=Professional%20Opportunity">✉ Contact Me</a>
+          <a class="btn btn-outline" href="#experience">Explore My Work ↓</a>
+        </div>
+        <div class="hero-meta"><span>Government Engineering College, Daman</span><span>Electrical Engineering</span><span>Open to GET & internship opportunities</span></div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head"><div class="section-kicker">Profile</div><h2>About Me</h2></div>
+        <div class="about-grid">
+          <div class="panel">
+            <p>I am a final-year Electrical Engineering student who enjoys understanding how electrical systems work in practical industrial environments. My academic interests include power system operation, electrical machines, protection and modern electric drives.</p>
+            <p>Through industrial training, technical visits and student competitions, I have been building a foundation that connects classroom concepts with real engineering applications. I value safety, continuous learning, teamwork and clear communication.</p>
+          </div>
+          <div class="panel facts">
+            <div class="fact"><small>Institution</small><strong>Government Engineering College, Daman</strong></div>
+            <div class="fact"><small>Program</small><strong>B.E. – Electrical Engineering</strong></div>
+            <div class="fact"><small>Recent academic highlight</small><strong>Semester VI SPI: 9.22</strong></div>
+            <div class="fact"><small>Career interest</small><strong>Graduate Engineer Trainee · Industrial roles</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" style="background:#edf3f8">
+      <div class="container">
+        <div class="section-head"><div class="section-kicker">Academic background</div><h2>Education & Focus Areas</h2></div>
+        <div class="grid-3">
+          <article class="card"><div class="card-icon">🎓</div><h3>B.E. Electrical Engineering</h3><p>Government Engineering College, Daman<br>Currently pursuing final year.</p></article>
+          <article class="card"><div class="card-icon">⚡</div><h3>Power & Machines</h3><p>Interest in power systems, transformers, electrical machines and protection systems.</p></article>
+          <article class="card"><div class="card-icon">🔧</div><h3>Drives & Automation</h3><p>Academic exposure to electric drives, power converters, PLC, DCS and SCADA fundamentals.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <div class="section-head"><div class="section-kicker">Industrial exposure</div><h2>Internship Experience</h2></div>
+        <div class="panel">
+          <div class="experience">
+            <h3>RR Kabel – Unit 1</h3>
+            <div class="meta">15-Day Industrial Internship · Cable Manufacturing</div>
+            <p>Observed key stages of cable manufacturing and gained exposure to production, quality checks and workplace safety practices.</p>
+            <ul>
+              <li>Observed processes including rod breakdown, bunching, stranding, taping, braiding/armouring, coiling and packing.</li>
+              <li>Learned how quality checks support product consistency and manufacturing standards.</li>
+              <li>Understood the importance of PPE, shop-floor discipline and emergency safety procedures.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="technical" style="background:#edf3f8">
+      <div class="container">
+        <div class="section-head"><div class="section-kicker">Learning beyond classroom</div><h2>Technical Exposure</h2></div>
+        <div class="grid-3">
+          <article class="card"><div class="card-icon">🏭</div><h3>220/66/11 kV Substation</h3><p>Technical visit to Ringanwada substation, with exposure to substation equipment, SCADA/SAS panels and DC battery backup systems.</p></article>
+          <article class="card"><div class="card-icon">☀️</div><h3>1 MW Solar Plant</h3><p>Visit to Magarwada solar plant to understand grid-connected solar generation and plant-level equipment.</p></article>
+          <article class="card"><div class="card-icon">🧠</div><h3>Academic Projects & Labs</h3><p>Practical learning in electrical machines, power electronics, electric drives and industrial automation subjects.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="achievements">
+      <div class="container">
+        <div class="section-head"><div class="section-kicker">Milestones</div><h2>Achievements & Recognition</h2><p class="lead">A selection of academic, technical and national-level programme milestones.</p></div>
+        <div class="achievement-grid">
+          <div class="achievement"><div class="medal">🏅</div><div><h3>My Bharat Budget Quest 2026</h3><p>Finalist – national-level youth programme.</p></div></div>
+          <div class="achievement"><div class="medal">🌱</div><div><h3>Viksit Village Vibrant Program</h3><p>Selected after Round 1 quiz.</p></div></div>
+          <div class="achievement"><div class="medal">🥇</div><div><h3>Bridge Building Competition</h3><p>Gold Medal.</p></div></div>
+          <div class="achievement"><div class="medal">🎯</div><div><h3>Young Turks</h3><p>All India Rank 5217.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" style="background:#edf3f8">
+      <div class="container">
+        <div class="section-head"><div class="section-kicker">Technical interests</div><h2>Core Knowledge</h2><p class="lead">Areas studied through coursework, laboratory work and industrial exposure.</p></div>
+        <div class="skills">
+          <span class="tag">Power Systems</span><span class="tag">Electrical Machines</span><span class="tag">Power Electronics</span><span class="tag">Electrical Protection</span><span class="tag">Electric Drives</span><span class="tag">Transformers</span><span class="tag">PLC Fundamentals</span><span class="tag">DCS & SCADA Fundamentals</span><span class="tag">Cable Manufacturing</span><span class="tag">Industrial Safety</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-kicker">Let's connect</div>
+        <h2>Interested in working together?</h2>
+        <p>I welcome opportunities to learn, contribute and grow in electrical engineering, power, manufacturing and industrial operations.</p>
+        <div class="actions"><a class="btn btn-primary" href="mailto:ray180528@gmail.com?subject=Professional%20Opportunity">Email: ray180528@gmail.com</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container"><span>© 2026 Nikhil Rai · Electrical Engineering Portfolio</span><span>Designed for professional opportunities</span></div></footer>
+</body>
+</html>
